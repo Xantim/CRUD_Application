@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+@model Dish
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to CRUDelicious</h1>
+    
+    <a href="Add">Add a Dish!</a>
+    <h2>Check out some of the recent dishes</h2>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Name</th>
+            <th>ChefName</th>
+            <th>Calories</th>
+            <th>Tastiness</th>
+            <th>Description</th>
+
+        </tr>
+        @{
+            foreach (Dish d in ViewBag.AllDishes)
+            {
+                <tr>
+                    <td><a href="@d.DishID">@d.Name</a></td>
+                    <td>By: @d.ChefName</td>
+                    <td>@d.Calories</td>
+                    <td>@d.Tastiness</td>
+                    <td>@d.Description</td>
+                </tr>
+            }
+        }
+    </table>
+
+</div>

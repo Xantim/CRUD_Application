@@ -1,0 +1,11 @@
+@using AS_CRUDelicious.Models;
+@model AS_CRUDelicious.Models.Dish;
+
+
+<p>@ViewBag.OneDish.Name</p>
+<p>@ViewBag.OneDish.ChefName</p>
+<p>@ViewBag.OneDish.Calories</p>
+<p>@ViewBag.OneDish.Tastiness</p>
+<p>@ViewBag.OneDish.Description</p> 
+
+<a href="/Edit/@ViewBag.OneDish.DishID">Edit Item</a>

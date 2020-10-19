@@ -1,0 +1,28 @@
+@model Dish
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <form asp-action="postmethod" method="post">
+        <label for="Name">Name</label>
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <input asp-for="Name">
+
+        <label for="ChefName">ChefName</label>
+        <span asp-validation-for="ChefName" class="text-danger"></span>
+        <input asp-for="ChefName">
+
+        <label for="Calories">Calories</label>
+        <span asp-validation-for="Calories" class="text-danger"></span>
+        <input asp-for="Calories">
+
+        <label for="Tastiness">Tastiness</label>
+        <span asp-validation-for="Tastiness" class="text-danger"></span>
+        <input asp-for="Tastiness">
+
+        <label for="Description">Description</label>
+        <span asp-validation-for="Description" class="text-danger"></span>
+        <input asp-for="Description">
+
+        <input type="submit" value="Submit">
+    </form>
+</div>

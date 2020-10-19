@@ -1,0 +1,29 @@
+@model Dish
+
+<h1 class="display-4">Edit Dish</h1>
+<div class="text-center">
+    <form action="/UpdateDish/@ViewBag.OneDish.DishID" method="post">
+        <div class="form-group">
+            <label for="Name">Name</label>
+            <input asp-for="Name" class="form-control" value="@ViewBag.OneDish.Name">
+            <span asp-validation-for="Name" class="text-danger"></span>
+
+            <label for="ChefName">ChefName</label>
+            <span asp-validation-for="ChefName" class="text-danger"></span>
+            <input asp-for="ChefName" class="form-control" value="@ViewBag.OneDish.ChefName">
+
+            <label for="Calories">Calories</label>
+            <span asp-validation-for="Calories" class="text-danger"></span>
+            <input asp-for="Calories" class="form-control" value="@ViewBag.OneDish.Calories">
+
+            <label for="Tastiness">Tastiness</label>
+            <span asp-validation-for="Tastiness" class="text-danger"></span>
+            <input asp-for="Tastiness" class="form-control" value="@ViewBag.OneDish.Tastiness">
+
+            <label for="Description">Description</label>
+            <span asp-validation-for="Description" class="text-danger"></span>
+            <input asp-for="Description" class="form-control" value="@ViewBag.OneDish.Description">
+        </div>
+        <input type="submit" value="Submit">
+    </form>
+</div>
